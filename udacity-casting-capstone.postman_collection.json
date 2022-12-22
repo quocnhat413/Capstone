@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "0a3bc1e3-acd6-4756-bbc3-c68aa335882d",
+		"name": "udacity-casting-capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3522017"
+	},
+	"item": [
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "/movies/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{host}}/movies/new"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{host}}/actors/new"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{host}}/movies/update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{host}}/actors/update/2"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/movies/delete/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/actors/delete/2"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijd2SDRyOW5wWUhvd2ktcEg3clVCTiJ9.eyJpc3MiOiJodHRwczovL25oYXRtcS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMwNTM5MGYwNmE0N2M2YWI2YzdhZmIzIiwiYXVkIjoiQ2Fwc3RvbmUiLCJpYXQiOjE2NzIwMDExMDcsImV4cCI6MTY3MjAwODMwNywiYXpwIjoickY1M3A5N1EwT1JoNUFwb21yNmJwNzZQcXhUSXppQWciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInZpZXc6YWN0b3JzIiwidmlldzptb3ZpZXMiXX0.kwLDO_Lq6Cs6FbhQvodzhdj_RRISd3f6JRmE9o9semrkEzfdX2Z0G02Fu58KFtEk9yjDcCtlyVuhxEu9mZuRL_SOhb3e05a_UFk1yFtOcT64yilFDo_JMvIxq42yW9IBY67ZMBHt94mxJp2qtx-jW5DMa6viiSdyNWjLT0L5wSIYSkvib55KZ1dF_oj9rh0DvISSz23OI_ZQtirRJhwmLqL4lrWyGWomdkkNWqLxMrX37xGzBkcLe94SNghVjUdo5t5Y75Gn93N3VaAS0pE0i3UqdWfGjtW_meKwzbzWoJesi-Lws-wgowmHuu7DKsclpAZxFIyw6nZ5cN5gUr_q4g"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "/movies/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Sharks 5\",\n\t\"release_year\": \"2015\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/movies/new"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/new",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Asamoah\",\n\t\"age\": 21,\n\t\"gender\": \"Female\",\n\t\"movie_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/actors/new"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Sharknado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/movies/update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Udacity\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/actors/update/2"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/movies/delete/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/actors/delete/2"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijd2SDRyOW5wWUhvd2ktcEg3clVCTiJ9.eyJpc3MiOiJodHRwczovL25oYXRtcS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMwNTM5NDYwNmE0N2M2YWI2YzdhZmM0IiwiYXVkIjoiQ2Fwc3RvbmUiLCJpYXQiOjE2NzIwMDA5OTYsImV4cCI6MTY3MjAwODE5NiwiYXpwIjoickY1M3A5N1EwT1JoNUFwb21yNmJwNzZQcXhUSXppQWciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImFkZDphY3RvcnMiLCJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIiwidmlldzphY3RvcnMiLCJ2aWV3Om1vdmllcyJdfQ.ZIlQ2hTKAuqC4a7kKv6Nq59jB7U3WTOS6LKJDDn03ZAdnFPRX0R_KhXiq4W2vewWvtWrCHSzUNG_7DTCXJGcLYss-6X7jYjDREYhMCOTxVVgimC-iulnoWIePxbLG724BsBaWf5mnI7vyjvZvXNXSqOg190OHV1Iq3_Smgh3YaTuRO460IbUV7mgWr-NeZ1S0iGdubE6X_isErDw8mFQ1DC6s0z1E2iAfs5Fz9qWNrdJmlKoGNU1XH7wGKsnunJWJO8vkeROECTY4rijKMl1md-pcA-S0LF8XDJ7r3taEw5NxSBMdrn1Xgdyg9SMhc_5qpqW67wlf8CCuZ9nKyWSIw"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "/movies/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Sharks 2\",\n\t\"release_year\": \"2012\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/movies/new"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Godfred\",\n\t\"age\": 12,\n\t\"gender\": \"Male\",\n\t\"movie_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/actors/new"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"The Mask\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/movies/update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Tyler Durden\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/actors/update/3"
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/movies/delete/2"
+					},
+					"response": []
+				},
+				{
+					"name": "/actors/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/actors/delete/3"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijd2SDRyOW5wWUhvd2ktcEg3clVCTiJ9.eyJpc3MiOiJodHRwczovL25oYXRtcS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDQ1NzMwNTk5ODgxNzU3MjE3MTAiLCJhdWQiOiJDYXBzdG9uZSIsImlhdCI6MTY3MjAwMTE2NSwiZXhwIjoxNjcyMDA4MzY1LCJhenAiOiJyRjUzcDk3UTBPUmg1QXBvbXI2YnA3NlBxeFRJemlBZyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiYWRkOmFjdG9ycyIsImFkZDptb3ZpZXMiLCJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIiwidmlldzphY3RvcnMiLCJ2aWV3Om1vdmllcyJdfQ.cvo2FsUPwpxGg90bCgm6cIuQ5jsSZ3P5LTF7P6LGpZhRRJwjHRQ81oJSGY6bWBGxB4ZEgt00yqaUQinMmKf4lAf8QFwjV-buF_6oPXGIUHu_ekr1kPNxcTKZqYC1Dd0HDzjygig0WL1zAsDkKwVTQ1W0lU9DTP-Tft5ELTpmQ7cHQ--UoqEyL9JW5Li9ndghMzVEZasMcWp3UXGyM7lrAVgWTX0FyURw0jz4D3CoyGs0UdBKVN75McPGv8enXdn8v3o2_KpYAE-8UTxcMrhlFXRbFxLavVgBNmG83NHF0mZD_M66Pm7bzOaIGqowBmtfEvv-RqnlHvCgLakzbMpCTw"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://capstonenhatmq.herokuapp.com",
+			"type": "string"
+		}
+	]
+}
